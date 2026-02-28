@@ -8,7 +8,7 @@ process.on("uncaughtException", (err) => {
   console.error("Uncaught Exception (Debug):", err);
   process.exit(1);
 });
-
+console.log("leho test)
 // [FIX] Import the correct 'Server' class and Request Schemas
 const { Server } = require("@modelcontextprotocol/sdk/server/index.js");
 const {

@@ -127,8 +127,8 @@ const UpdateSessionContextSchema = z.object({
 const SubmitQuerySchema = z.object({
   sessionId: z.string().min(1),
   query: z.string().min(1),
-  endpointId: z.string().min(1),
-  responseMode: z.enum(["sync", "stream", "webhook"]),
+  endpointId: z.string().min(1).default("predefined-xai-grok4.2-non-reasoning"),
+  responseMode: z.enum(["sync", "stream", "webhook"]).default("sync"),
   reasoningMode: z
     .enum(["low", "medium", "high", "dynamicturbo"])
     .default("medium")
